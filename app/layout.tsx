@@ -1,9 +1,7 @@
-"use client";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Rubik } from "next/font/google";
 import Provider from "@providers/Provider";
-import ClientWalletProvider from "@providers/ClientWalletProvider";
 import Header from "@components/Header";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -36,19 +34,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <ClientWalletProvider>
-          <Provider
-            attribute="data-theme"
-            storageKey="sol-launchpad-theme"
-            defaultTheme="dark"
-          >
-            <Header />
-            <div className="flex flex-col h-screen"></div>
-            {children}
-          </Provider>
-        </ClientWalletProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${montserrat.variable} ${rubik.variable} font-rubik`}>
+        <Provider
+          attribute="data-theme"
+          storageKey="sol-launchpad-theme"
+          defaultTheme="dark"
+        >
+          <Header />
+          {children}
+          <div className="h-screen"></div>
+        </Provider>
       </body>
     </html>
   );
