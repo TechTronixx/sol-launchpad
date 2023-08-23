@@ -43,7 +43,6 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <div className="h-screen"></div>
         </Provider>
       </body>
     </html>
