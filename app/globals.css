@@ -102,17 +102,17 @@ body {
   @apply w-full font-monsterr bg-secondary/50 hover:bg-tealClr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
 }
 
+/* Connect Wallet Button */
 .wallet-adapter-button {
-  border: 1px solid hsl(var(--secondary));
+  border: 4px solid hsl(var(--secondary));
   height: fit-content;
   line-height: normal;
-  color: #fff;
   padding: 0.5em 1em;
 }
 
 .wallet-adapter-button:not([disabled]):hover {
   background-color: var(--tealDarkClr);
-  border: 1px solid var(--tealDarkClr);
+  border: 4px solid var(--tealDarkClr);
 }
 
 .custom-gradient-text {
@@ -134,7 +134,7 @@ body {
   }
 }
 
-@media (width <= 640px){
+@media (width <= 640px) {
   .wallet-adapter-button {
     padding: 0.5em 1em;
   }

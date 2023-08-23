@@ -10,16 +10,16 @@ require("../app/globals.css");
 export const montserrat = Montserrat({
   weight: "700",
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  // display: "swap",
+  // preload: true,
   variable: "--Montserrat",
 });
 
 export const rubik = Rubik({
   weight: "400",
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  // display: "swap",
+  // preload: true,
   variable: "--Rubik",
 });
 
