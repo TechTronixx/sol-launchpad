@@ -23,7 +23,9 @@ body {
       #00ffa3,
       #dc1fff
     );
-    --tealclr: #99f6e4;
+    --tealClr: #99f6e4;
+    --tealDarkClr: #008080;
+
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
 
@@ -93,20 +95,24 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
 
-  /* Sidebar Panel */
-  .SidebarLink {
-    @apply w-full font-monsterr bg-secondary/50 hover:bg-tealclr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
-  }
+/* Sidebar Panel */
+.SidebarLink {
+  @apply w-full font-monsterr bg-secondary/50 hover:bg-tealClr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
+}
+
+.wallet-adapter-button {
+  border: 1px solid hsl(var(--secondary));
+  height: fit-content;
+  line-height: normal;
+  color: #fff;
+  padding: 0.5em 1em;
 }
 
 .wallet-adapter-button:not([disabled]):hover {
-  background-color: teal;
-  border: 1px solid teal;
-}
-.wallet-adapter-button {
-  color: #fff;
-  border: 1px solid hsl(var(--secondary));
+  background-color: var(--tealDarkClr);
+  border: 1px solid var(--tealDarkClr);
 }
 
 .custom-gradient-text {
@@ -125,5 +131,11 @@ body {
   }
   to {
     background-position: -200% center;
+  }
+}
+
+@media (width <= 640px){
+  .wallet-adapter-button {
+    padding: 0.5em 1em;
   }
 }
