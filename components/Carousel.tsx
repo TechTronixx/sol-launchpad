@@ -8,7 +8,7 @@ const Carouselslider = () => {
       wrapAround
       withoutControls={true}
       dragThreshold={0.25}
-      style={{ borderRadius: "20px", aspectRatio: "16/9" }}
+      style={{ borderRadius: "10px", aspectRatio: "16/9" }}
     >
       <Image
         src={HeroImg1}
@@ -25,7 +25,7 @@ const Carouselslider = () => {
         style={{
           objectFit: "cover",
           width: "100%",
-          borderRadius: "20px",
+          borderRadius: "10px",
         }}
       />
       <Image
@@ -34,7 +34,7 @@ const Carouselslider = () => {
         style={{
           objectFit: "cover",
           width: "100%",
-          borderRadius: "20px",
+          borderRadius: "10px",
         }}
       />
       <Image
@@ -43,7 +43,7 @@ const Carouselslider = () => {
         style={{
           objectFit: "cover",
           width: "100%",
-          borderRadius: "20px",
+          borderRadius: "10px",
         }}
       />
       <Image
@@ -52,7 +52,7 @@ const Carouselslider = () => {
         style={{
           objectFit: "cover",
           width: "100%",
-          borderRadius: "20px",
+          borderRadius: "10px",
         }}
       />
     </Carousel>

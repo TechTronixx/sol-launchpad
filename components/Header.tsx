@@ -73,7 +73,7 @@ const Header = (props: Props) => {
           <Sheet open={showSidebar} onOpenChange={setShowSidebar}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="lg:hidden">
-                <Menu />
+                <Menu size={30} />
               </Button>
             </SheetTrigger>
 
@@ -103,8 +103,8 @@ const Header = (props: Props) => {
                   rel="noopener noreferrer"
                 >
                   <svg
-                    width="32"
-                    height="32"
+                    width="24"
+                    height="24"
                     viewBox="0 0 300 300"
                     version="1.1"
                     fill="currentColor"
@@ -128,8 +128,8 @@ const Header = (props: Props) => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
+                    width="24"
+                    height="24"
                     fill="currentColor"
                     viewBox="0 0 16 16"
                   >
