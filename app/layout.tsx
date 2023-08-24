@@ -1,11 +1,10 @@
 import "./globals.css";
+import "@solana/wallet-adapter-react-ui/styles.css";
 import type { Metadata } from "next";
 import { Montserrat, Rubik } from "next/font/google";
 import Provider from "@providers/Provider";
 import Header from "@components/Header";
-
-require("@solana/wallet-adapter-react-ui/styles.css");
-require("../app/globals.css");
+import Loader from "@components/Loader";
 
 export const montserrat = Montserrat({
   weight: "700",
@@ -35,7 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} ${rubik.variable} font-rubik`}>
+      <body
+        className={`${montserrat.variable} ${rubik.variable} font-rubik relative`}
+      >
         <Provider
           attribute="data-theme"
           storageKey="sol-launchpad-theme"
@@ -43,6 +44,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Loader />
         </Provider>
       </body>
     </html>
