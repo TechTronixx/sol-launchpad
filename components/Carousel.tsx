@@ -1,6 +1,7 @@
 import Carousel from "nuka-carousel";
 import Image from "next/image";
-import { HeroImg1, HeroImg2, HeroImg3 } from "@images";
+import HeroImg from "../images/heroImg.jpg";
+
 const Carouselslider = () => {
   return (
     <Carousel
@@ -11,47 +12,56 @@ const Carouselslider = () => {
       style={{ borderRadius: "10px", aspectRatio: "16/9" }}
     >
       <Image
-        src={HeroImg1}
+        src={HeroImg}
+        width={600}
+        height={450}
         alt={""}
         style={{
           objectFit: "cover",
-          width: "100%",
+          height: "100%",
+
           borderRadius: "10px",
         }}
       />
       <Image
-        src={HeroImg2}
+        src={HeroImg}
+        width={600}
+        height={450}
         alt={""}
         style={{
           objectFit: "cover",
-          width: "100%",
+
           borderRadius: "10px",
         }}
       />
       <Image
-        src={HeroImg3}
+        src={HeroImg}
+        width={600}
+        height={450}
         alt={""}
         style={{
           objectFit: "cover",
-          width: "100%",
+
           borderRadius: "10px",
         }}
       />
       <Image
-        src={HeroImg1}
+        src={HeroImg}
+        width={600}
+        height={450}
         alt={""}
         style={{
           objectFit: "cover",
-          width: "100%",
           borderRadius: "10px",
         }}
       />
       <Image
-        src={HeroImg1}
+        src={HeroImg}
+        width={600}
+        height={450}
         alt={""}
         style={{
           objectFit: "cover",
-          width: "100%",
           borderRadius: "10px",
         }}
       />

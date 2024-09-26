@@ -3,7 +3,7 @@ import { Logo } from "@images";
 import Image from "next/image";
 import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { Home, Info, Menu } from "lucide-react";
+import { Home, Info, Menu, Mail, FileText } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -30,16 +30,24 @@ const Header = (props: Props) => {
           >
             About
           </Link>
+          <Link
+            href="/contact"
+            className="duration-500 cursor-pointer delay-600 animate-in fade-in zoom-in hover:text-tealClr"
+          >
+            Contact
+          </Link>
+          <Link
+            href="/token-creator"
+            className="duration-500 cursor-pointer delay-600 animate-in fade-in zoom-in hover:text-tealClr"
+          >
+            Token Creator
+          </Link>
         </nav>
 
         <div className="flex items-center justify-center gap-4">
           <nav className="hidden gap-4 lg:flex">
             {/* <!-- Twitter SVG--> */}
-            <Link
-              href="https://twitter.com/printonsol"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/" target="_blank" rel="noopener noreferrer">
               <svg
                 width="23"
                 height="23"
@@ -56,11 +64,7 @@ const Header = (props: Props) => {
             </Link>
 
             {/* <!-- Discord SVG --> */}
-            <Link
-              href="http://discord.gg/printonsol"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/" target="_blank" rel="noopener noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -108,7 +112,23 @@ const Header = (props: Props) => {
                 <Link
                   onClick={() => setShowSidebar(false)}
                   className="SidebarLink"
-                  href="https://twitter.com/printonsol"
+                  href="/contact"
+                >
+                  <Mail size={28} />
+                  <div className="text-[0.8em]">Contact</div>
+                </Link>
+                <Link
+                  onClick={() => setShowSidebar(false)}
+                  className="SidebarLink"
+                  href="/token-creator"
+                >
+                  <FileText size={28} />
+                  <div className="text-[0.8em]">Token Creator</div>
+                </Link>
+                <Link
+                  onClick={() => setShowSidebar(false)}
+                  className="SidebarLink"
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -132,7 +152,7 @@ const Header = (props: Props) => {
                 <Link
                   onClick={() => setShowSidebar(false)}
                   className="SidebarLink"
-                  href="http://discord.gg/printonsol"
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

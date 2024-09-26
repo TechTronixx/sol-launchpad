@@ -22,7 +22,7 @@ function Hero() {
         <h2 className="mb-4 text-xl text-teal-200 lg:text-2xl xl:text-2xl font-monsterr">
           Unleash Your <i>Projects</i> Potential
         </h2>
-        <p className="mb-4 text-base lg:text-lg font-rubik ">
+        <p className="mb-4 text-base lg:text-lg font-rubik">
           XYZ is a <span className="custom-gradient-text">Solana</span> based
           Launchpad
           <br />
