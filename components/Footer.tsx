@@ -91,7 +91,12 @@ export default function Footer() {
         </div>
         <Separator className="my-6" />
         <div className="text-sm text-center">
-          © {new Date().getFullYear()} Token Launchpad. All rights reserved.
+          © {new Date().getFullYear()} Solana Launchpad. All rights reserved.
+          <br />
+          Made with ❤️ by{" "}
+          <Link href="https://github.com/TechTronixx" target="_blank">
+            <span className="font-bold text-teal-400">TechTronixx</span>
+          </Link>
         </div>
       </div>
     </footer>

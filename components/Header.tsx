@@ -42,6 +42,12 @@ const Header = (props: Props) => {
           >
             Token Creator
           </Link>
+          <Link
+            href="/nft-creator"
+            className="duration-500 cursor-pointer delay-600 animate-in fade-in zoom-in hover:text-tealClr"
+          >
+            NFT Creator
+          </Link>
         </nav>
 
         <div className="flex items-center justify-center gap-4">

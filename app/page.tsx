@@ -39,47 +39,51 @@ export default function Home() {
 
         <div className="flex flex-col items-start gap-8 lg:w-1/2 lg:mt-[2em]">
           <div>
-            <h2 className="text-[1.6em] font-bold mb-4 text-teal-400">
+            <h2 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400">
               Project Title
             </h2>
-            <p className="text-justify text-slate-200">
+            <p className="pl-6 text-justify text-slate-200">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laudantium, expedita alias repellat fuga aperiam officiis quidem
               fugiat eveniet harum non quo, nostrum dolor, cum sequi cupiditate
               odio tempora voluptate dignissimos.Lorem ipsum dolor sit amet
               consectetur adipisicing elit. Laudantium.
             </p>
-            <h4 className="text-[1.1em] font-extralight mb-4 mt-6 text-tealClr font-monsterr">
-              • Total Supply :
-            </h4>
-            <h3 className="text-[1.1em] font-extralight mb-4 text-tealClr font-monsterr">
-              • Minting Price :
-            </h3>
-            <h3 className="text-[1.1em] font-extralight text-tealClr mb-4 font-monsterr">
-              • Remaining supply :
-            </h3>
+            <div className="pl-6">
+              <h4 className="text-[1.1em] font-extralight mb-4 mt-6 text-tealClr font-monsterr">
+                • Total Supply :
+              </h4>
+              <h3 className="text-[1.1em] font-extralight mb-4 text-tealClr font-monsterr">
+                • Minting Price :
+              </h3>
+              <h3 className="text-[1.1em] font-extralight text-tealClr mb-4 font-monsterr">
+                • Remaining supply :
+              </h3>
+            </div>
           </div>
 
           <div className="text-slate-200">
-            <h3 className="text-[1.6em] font-bold mb-4 text-teal-400">
+            <h3 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400">
               Utility
             </h3>
-            <ul className="pl-6 space-y-2 list-disc">
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium, expedita alias repellat fuga aperiam officiis quidem
-                fugiat eveniet harum non quo,
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium, expedita alias repellat fuga aperiam officiis quidem
-                fugiat eveniet harum non quo,
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium, expedita alias repellat fuga aperiam officiis quidem
-                fugiat eveniet harum non quo,
-              </li>
+            <ul className="pl-6">
+              <div className="pl-6 space-y-4 list-disc">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium, expedita alias repellat fuga aperiam officiis
+                  quidem fugiat eveniet harum non quo,
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium, expedita alias repellat fuga aperiam officiis
+                  quidem fugiat eveniet harum non quo,
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium, expedita alias repellat fuga aperiam officiis
+                  quidem fugiat eveniet harum non quo,
+                </li>
+              </div>
             </ul>
           </div>
 

@@ -1,37 +1,77 @@
-## Solana Project Launchpad - DEMO
+# Solana Launchpad Template
 
-This is a Demo [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-It will be used to showcase Projects on Solana Blockchain & mint them.
+A dummy Solana launchpad frontend with various features.
 
-## Getting Started
+## Features
 
-First, run the development server:
+- Token Creator: Create custom tokens on the Solana blockchain
+- Responsive Design: Mobile-friendly user interface
+- Dark Mode: Built-in dark mode support
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 13 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Solana Web3.js
+- Wallet Adapter for Solana
+- Shadcn UI Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/yourusername/solana-launchpad-template.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd solana-launchpad-template
+   ```
+
+3. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+You can start customizing the project by modifying the files in the `app` and `components` directories. The main page is `app/page.tsx`.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Custom Queries
+
+For custom development requests or queries, please contact us at:
+
+[foxstot@gmail.com]
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this template:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Solana Web3.js Documentation](https://solana-labs.github.io/solana-web3.js/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

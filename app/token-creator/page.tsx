@@ -48,7 +48,7 @@ export default function TokenCreatorPage() {
               />
               <div className="relative">
                 <Input placeholder="Upload Image" disabled />
-                <Button className="absolute top-0 bottom-0 right-0 text-white bg-gradient-to-r from-slate-700 to-teal-700 hover:from-slate-600 hover:to-teal-600 border-teal-400/50">
+                <Button className="absolute top-0 bottom-0 right-0 text-white bg-teal-400 hover:bg-teal-500 border-teal-400/50">
                   <Upload className="w-4 h-4 mr-2" /> Upload Image
                 </Button>
               </div>
@@ -121,13 +121,13 @@ export default function TokenCreatorPage() {
             <div className="flex justify-center space-x-4">
               <Button
                 variant="outline"
-                className="text-white bg-gradient-to-r from-slate-700 to-teal-700 hover:from-slate-600 hover:to-teal-600 border-teal-400/50"
+                className="text-white bg-teal-400 hover:bg-teal-500 border-teal-400/50"
               >
                 Revoke Freeze Authority
               </Button>
               <Button
                 variant="outline"
-                className="text-white bg-gradient-to-r from-slate-700 to-teal-700 hover:from-slate-600 hover:to-teal-600 border-teal-400/50"
+                className="text-white bg-teal-400 hover:bg-teal-500 border-teal-400/50"
               >
                 Revoke Mint Authority
               </Button>

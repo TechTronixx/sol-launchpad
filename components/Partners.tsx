@@ -9,9 +9,11 @@ import { partnerLogos } from "@/images";
 const Partners = () => {
   return (
     <section className="py-16">
-      <div className="container px-4 mx-auto">
-        <h2 className="mb-12 text-3xl font-bold text-center">Our Partners</h2>
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <h2 className="mb-12 text-2xl sm:text-3xl font-bold text-center">
+          Our Partners
+        </h2>
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
           {partnerLogos.map((logo, index) => (
             <motion.div
               key={index}
