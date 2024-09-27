@@ -40,7 +40,7 @@ export default function NFTCreator() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="container px-4 py-8 mx-auto"
+      className="container px-4 py-8 mx-auto bg-opacity-50 border rounded-lg bg-slate-800 backdrop-blur-sm border-teal-400/20"
     >
       <h1 className="mb-4 text-3xl font-bold text-teal-400">NFT Creation</h1>
       <p className="mb-6 text-slate-200">

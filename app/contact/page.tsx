@@ -65,7 +65,10 @@ export default function ContactPage() {
                 rows={5}
               />
             </div>
-            <Button type="submit" className="w-full">
+            <Button
+              type="submit"
+              className="w-full bg-teal-400 hover:bg-teal-600"
+            >
               Send Message
             </Button>
           </form>

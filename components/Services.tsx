@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
@@ -41,16 +40,16 @@ const services = [
   {
     title: "NFT Mint Page",
     description: "Create a custom minting page for your NFT collection.",
-    link: "/nft-mint",
+    link: "/mint-NFT",
     icon: Palette,
   },
 ];
 
 const serviceVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, scale: 0.9 },
   visible: (i: number) => ({
     opacity: 1,
-    y: 0,
+    scale: 1,
     transition: {
       delay: i * 0.1,
       duration: 0.5,
@@ -60,11 +59,11 @@ const serviceVariants = {
 
 export default function Services() {
   return (
-    <section className="px-4 lg:px-8 h-[70vh] py-20">
-      <h2 className="mb-12 text-4xl font-bold text-center text-teal-400">
+    <section className="px-4 pb-20 lg:px-8 bg-gradient-to-b from-background to-slate-900">
+      <h2 className="mb-12 text-4xl font-bold text-center text-teal-400 glitch-text">
         Our Services
       </h2>
-      <div className="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid max-w-6xl grid-cols-6 gap-4 mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
@@ -73,25 +72,30 @@ export default function Services() {
             whileInView="visible"
             viewport={{ once: true }}
             custom={index}
+            className={`bg-slate-800 p-6 rounded-lg border border-teal-400/30 flex flex-col justify-between transition-all duration-300 hover:border-teal-400 group ${
+              index === 0
+                ? "col-span-6 md:col-span-4"
+                : "col-span-6 md:col-span-2"
+            } ${index % 2 === 0 ? "row-span-1" : "row-span-2"}`}
           >
-            <Card className="h-full transition-shadow duration-300 hover:shadow-lg">
-              <CardHeader className="flex flex-row items-center space-x-4">
+            <div>
+              <div className="flex items-center mb-4 space-x-3">
                 <service.icon className="w-8 h-8 text-teal-500" />
-                <CardTitle className="text-teal-500">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-col justify-between h-full">
-                <p className="mb-6 text-slate-200">{service.description}</p>
-                <Link href={service.link}>
-                  <Button
-                    variant="outline"
-                    className="w-full text-teal-400 transition-colors hover:bg-teal-400 hover:text-background"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                <h3 className="text-xl font-bold text-teal-500">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="mb-6 text-slate-200">{service.description}</p>
+            </div>
+            <Link href={service.link}>
+              <Button
+                variant="outline"
+                className="w-full text-teal-400 transition-colors border-teal-400 group-hover:bg-teal-400 group-hover:text-background"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </motion.div>
         ))}
       </div>

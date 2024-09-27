@@ -36,8 +36,8 @@ const faqVariants = {
 
 export default function FAQ() {
   return (
-    <section className="px-[2em] lg:px-[4em] py-12">
-      <h2 className="mb-8 text-3xl font-bold text-center text-teal-400">
+    <section className="px-[2em] lg:px-[4em] py-12 bg-gradient-to-b from-background to-slate-900">
+      <h2 className="mb-8 text-3xl font-bold text-center text-teal-400 glitch-text">
         Frequently Asked Questions
       </h2>
       <motion.div

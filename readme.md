@@ -19,6 +19,16 @@ A dummy Solana launchpad frontend with various features.
 - Wallet Adapter for Solana
 - Shadcn UI Components
 
+## Sample Images
+
+Here are some sample images from the project:
+
+![Hero Image](images/heroImg.jpg)
+_Hero Image_
+
+![Logo](images/logo.png)
+_Project Logo_
+
 ## Installation
 
 1. Clone the repository:
@@ -36,13 +46,13 @@ A dummy Solana launchpad frontend with various features.
 3. Install dependencies:
 
    ```
-   npm install
+   pnpm install
    ```
 
 4. Run the development server:
 
    ```
-   npm run dev
+   pnpm run dev
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

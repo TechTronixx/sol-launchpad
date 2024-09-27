@@ -9,22 +9,19 @@ import Loader from "@components/Loader";
 export const montserrat = Montserrat({
   weight: "700",
   subsets: ["latin"],
-  // display: "swap",
-  // preload: true,
   variable: "--Montserrat",
 });
 
 export const rubik = Rubik({
   weight: "400",
   subsets: ["latin"],
-  // display: "swap",
-  // preload: true,
   variable: "--Rubik",
 });
 
 export const metadata: Metadata = {
-  title: "PRNT | Launchpad",
-  description: "A Solana Launchpad site to showcase Projects and mint them.",
+  title: "Solana | Launchpad",
+  description:
+    "A Solana Launchpad to showcase Projects and launch tokens & mint NFT's.",
 };
 
 export default function RootLayout({

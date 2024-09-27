@@ -17,7 +17,7 @@ export default function TokenCreatorPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col min-h-screen bg-black"
+      className="flex flex-col min-h-screen bg-gradient-to-b from-background to-slate-900"
     >
       <section className="flex-grow px-[2em] lg:px-[4em] py-12">
         <motion.div

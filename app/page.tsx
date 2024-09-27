@@ -20,10 +20,8 @@ export default function Home() {
     >
       <Hero />
 
-      <Separator className="w-[90%] mx-auto mt-10 lg:mt-20" />
-
       {/* Overview section */}
-      <section className="flex flex-col lg:flex-row justify-center items-start gap-4 px-[2em] lg:px-[4em] py-4 w-full">
+      <section className="flex flex-col lg:flex-row justify-center bg-gradient-to-b from-slate-900 to-background items-start gap-4 px-[2em] lg:px-[4em] py-4 w-full">
         <div className="relative flex flex-col h-full gap-4 lg:w-1/2">
           <h1 className="text-[2em] font-bold text-teal-500">Overview</h1>
           <Image
@@ -39,7 +37,7 @@ export default function Home() {
 
         <div className="flex flex-col items-start gap-8 lg:w-1/2 lg:mt-[2em]">
           <div>
-            <h2 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400">
+            <h2 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400 glitch-text">
               Project Title
             </h2>
             <p className="pl-6 text-justify text-slate-200">
@@ -63,7 +61,7 @@ export default function Home() {
           </div>
 
           <div className="text-slate-200">
-            <h3 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400">
+            <h3 className="text-[1.6em] pl-6 font-bold mb-4 text-teal-400 glitch-text">
               Utility
             </h3>
             <ul className="pl-6">
@@ -116,8 +114,6 @@ export default function Home() {
 
       {/* Partners section */}
       <Partners />
-
-      <Separator className="w-[90%] mx-auto my-10 lg:my-20" />
 
       <Footer />
     </motion.main>
