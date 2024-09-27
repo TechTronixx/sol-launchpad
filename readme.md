@@ -1,12 +1,14 @@
 # Solana Launchpad Template
 
-A dummy Solana launchpad frontend with various features.
+A Solana launchpad frontend with various features.
+![Sample Image](https://github.com/TechTronixx/sol-launchpad/blob/master/Sample.png)
 
 ## Features
 
-- Token Creator: Create custom tokens on the Solana blockchain
+- Token Creator UI: Create custom tokens on the Solana blockchain
+- NFT Creator UI: Create custom NFTs on the Solana blockchain 
+- Mint NFT UI: Mint NFTs on the Solana blockchain
 - Responsive Design: Mobile-friendly user interface
-- Dark Mode: Built-in dark mode support
 
 ## Tech Stack
 
@@ -19,28 +21,18 @@ A dummy Solana launchpad frontend with various features.
 - Wallet Adapter for Solana
 - Shadcn UI Components
 
-## Sample Images
-
-Here are some sample images from the project:
-
-![Hero Image](images/heroImg.jpg)
-_Hero Image_
-
-![Logo](images/logo.png)
-_Project Logo_
-
 ## Installation
 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/solana-launchpad-template.git
+   git clone https://github.com/TechTronixx/solana-launchpad-template.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd solana-launchpad-template
+   cd solana-launchpad
    ```
 
 3. Install dependencies:
@@ -67,21 +59,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Custom Queries
 
-For custom development requests or queries, please contact us at:
+For custom development requests or queries, please contact me at
+[foxstot@gmail.com](mailto:foxstot@gmail.com)
 
-[foxstot@gmail.com]
-
-## Learn More
-
-To learn more about the technologies used in this template:
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Solana Web3.js Documentation](https://solana-labs.github.io/solana-web3.js/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Framer Motion Documentation](https://www.framer.com/motion/)
-
-## Deployment
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
