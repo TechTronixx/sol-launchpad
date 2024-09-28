@@ -8,6 +8,7 @@ import Features from "@/components/Features";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import SolanaLaunchpadCTA from "@/components/SolanaLaunchpadCTA";
 import Partners from "@/components/Partners";
 import Services from "@/components/Services";
 
@@ -18,8 +19,9 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      {" "}
+      <SolanaLaunchpadCTA />
       <Hero />
-
       {/* Overview section */}
       <section className="flex flex-col lg:flex-row justify-center bg-gradient-to-b from-slate-900 to-background items-start gap-4 px-[2em] lg:px-[4em] py-4 w-full">
         <div className="relative flex flex-col h-full gap-4 lg:w-1/2">
@@ -94,27 +96,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <Separator className="w-[90%] mx-auto my-10 lg:my-20" />
-
       {/* Features section */}
       <Features />
-
       <Separator className="w-[90%] mx-auto my-10 lg:my-20" />
-
       {/* Services section */}
       <Services />
-
       <Separator className="w-[90%] mx-auto my-10 lg:my-20" />
-
       {/* FAQ section */}
       <FAQ />
-
       <Separator className="w-[90%] mx-auto my-10 lg:my-20" />
-
       {/* Partners section */}
       <Partners />
-
       <Footer />
     </motion.main>
   );

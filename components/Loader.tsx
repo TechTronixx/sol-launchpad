@@ -14,7 +14,7 @@ const Loader = () => {
 
   if (showLoader)
     return (
-      <div className="fixed flex justify-center items-center top-0 z-[99] overflow-hidden w-full h-screen bg-black/10 backdrop-none">
+      <div className="fixed flex justify-center items-center top-0 z-[99] overflow-hidden w-full h-screen bg-black/10 backdrop-blur-sm">
         <div className="ui-abstergo">
           <div className="abstergo-loader">
             <div></div>
