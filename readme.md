@@ -3,8 +3,9 @@
 A Solana launchpad frontend with various features.
 ![Sample Image](https://github.com/TechTronixx/sol-launchpad/blob/master/Sample.png)
 
-## Features
+https://github.com/user-attachments/assets/288ea138-e33a-4962-8f2b-af4202c4af58
 
+## Features
 - Token Creator UI: Create custom tokens on the Solana blockchain
 - NFT Creator UI: Create custom NFTs on the Solana blockchain 
 - Mint NFT UI: Mint NFTs on the Solana blockchain
