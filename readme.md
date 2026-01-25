@@ -52,11 +52,12 @@ https://github.com/user-attachments/assets/288ea138-e33a-4962-8f2b-af4202c4af58
 
 ## Stats
 If you find this project useful, consider giving it a star!
-<a href="https://www.star-history.com/#nextlevelbuilder/ui-ux-pro-max-skill&TechTronixx/sol-launchpad&type=date&legend=top-left">
+
+<a href="https://www.star-history.com/#TechTronixx/sol-launchpad&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nextlevelbuilder/ui-ux-pro-max-skill,TechTronixx/sol-launchpad&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nextlevelbuilder/ui-ux-pro-max-skill,TechTronixx/sol-launchpad&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=nextlevelbuilder/ui-ux-pro-max-skill,TechTronixx/sol-launchpad&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TechTronixx/sol-launchpad&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TechTronixx/sol-launchpad&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=TechTronixx/sol-launchpad&type=date&legend=top-left" />
  </picture>
 </a>
 
