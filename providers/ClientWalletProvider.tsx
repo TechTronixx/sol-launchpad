@@ -22,7 +22,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
       new SolflareWalletAdapter(),
       new TorusWalletAdapter(),
     ],
-    [network]
+    [],
   );
 
   const onError = useCallback((error: WalletError) => {

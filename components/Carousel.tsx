@@ -1,6 +1,6 @@
 import Carousel from "nuka-carousel";
 import Image from "next/image";
-import HeroImg from "../images/heroImg.jpg";
+import { HeroImg } from "../images";
 
 const Carouselslider = () => {
   return (
@@ -15,7 +15,8 @@ const Carouselslider = () => {
         src={HeroImg}
         width={600}
         height={450}
-        alt={""}
+        alt="Hero Image 1"
+        priority
         style={{
           objectFit: "cover",
           height: "100%",

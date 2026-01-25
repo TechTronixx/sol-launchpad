@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 const faqs = [
   {
@@ -36,33 +37,39 @@ const faqVariants = {
 
 export default function FAQ() {
   return (
-    <section className="px-[2em] lg:px-[4em] py-12 bg-gradient-to-b from-background to-slate-900">
-      <h2 className="mb-8 text-3xl font-bold text-center text-teal-400 glitch-text">
-        Frequently Asked Questions
-      </h2>
-      <motion.div
-        variants={faqVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full max-w-2xl mx-auto"
+    <section className="px-[2em] lg:px-[4em] py-24 bg-transparent">
+      <div className="max-w-3xl mx-auto">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-clash text-foreground tracking-tight mb-2">
+            FAQ
+          </h2>
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
+        </div>
+
+        <motion.div
+          variants={faqVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-teal-500">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-slate-200">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </motion.div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border border-border/50 bg-card/20 backdrop-blur-sm rounded-sm px-4 data-[state=open]:border-primary/50 transition-colors duration-300"
+              >
+                <AccordionTrigger className="text-foreground hover:text-primary transition-colors font-syne text-lg py-6 underline-offset-4 decoration-primary/30">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground font-space leading-relaxed pb-6 text-base">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
     </section>
   );
 }

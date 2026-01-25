@@ -6,90 +6,123 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  /* background: #000;
-  border: 1px solid red;
-  outline: 1px solid green; */
 }
 
 @layer base {
   :root {
-    --solana-gradient: linear-gradient(
-      90deg,
-      #dc1fff,
-      #03e1ff,
-      #00ffa3,
-      #dc1fff
-    );
-    --tealClr: #99f6e4;
-    --tealDarkClr: #008080;
+    /* Solana Brand Gradient */
+    --solana-gradient: linear-gradient(90deg, #9945ff, #14f195);
 
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    /* Light Mode - Balanced Warm Aesthetic */
+    /* NO GRAY allows: Warm Browns, Deep Teals, Rich Creams */
+    --background: 40 50% 98%; /* Golden Cream */
+    --foreground: 222 47% 15%; /* Deep Navy for contrast */
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card: 40 30% 96%; /* Warm card */
+    --card-foreground: 222 47% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover: 40 50% 98%;
+    --popover-foreground: 222 47% 15%;
 
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 173 80% 32%; /* Deep Teal */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 35 30% 94%; /* Warm Sand */
+    --secondary-foreground: 222 47% 15%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 35 30% 94%;
+    --muted-foreground: 25 20% 35%; /* Warm Deep Brown - NO GRAY */
 
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --accent: 35 30% 94%;
+    --accent-foreground: 222 47% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
+    --border: 35 20% 88%; /* Warm Beige Border */
+    --input: 35 20% 88%;
+    --ring: 173 80% 32%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    --tealClr: #0d9488;
+    --tealDarkClr: #0f766e;
+
+    --grid-color: hsla(173, 80%, 35%, 0.08);
+
+    /* Mesh Gradient Colors (Light - Warm/Teal/Purple) */
+    --mesh-color-1: hsla(173, 80%, 40%, 0.15);
+    --mesh-color-2: hsla(40, 80%, 60%, 0.15);
+    --mesh-color-3: hsla(280, 60%, 70%, 0.1);
+    --mesh-color-4: hsla(210, 80%, 80%, 0.1);
   }
 
-  [data-theme="dark"] {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+  .dark {
+    /* Dark Mode Palette - Deep Void Aesthetic (NO GRAY) */
+    /* Base is a very deep, rich teal-black */
+    --background: 222 47% 7%; /* Deep Void */
+    --foreground: 210 40% 98%; /* Ice White */
 
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
+    --card: 222 47% 10%; /* Lighter Void */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
+    --primary: 173 80% 45%; /* Neon Teal */
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 217 30% 15%; /* Deep Blue-Tinted Void */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted: 217 30% 15%;
+    --muted-foreground: 180 20% 70%; /* Icy Blue-Grey (Not standard gray) */
 
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 173 30% 15%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    --border: 217 30% 15%; /* Void Border */
+    --input: 217 30% 15%;
+    --ring: 173 80% 45%;
+
+    --tealClr: #14b8a6;
+    --tealDarkClr: #115e59;
+
+    --grid-color: hsla(173, 50%, 50%, 0.05);
+
+    /* Mesh Gradient Colors (Dark - Deep Space) */
+    --mesh-color-1: hsla(173, 60%, 20%, 0.4);
+    --mesh-color-2: hsla(260, 60%, 20%, 0.4);
+    --mesh-color-3: hsla(190, 60%, 20%, 0.4);
+    --mesh-color-4: hsla(222, 60%, 10%, 0.6);
   }
+}
+
+.mesh-gradient-bg {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(var(--grid-color) 1px, transparent 1px),
+    radial-gradient(at 0% 0%, var(--mesh-color-1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--mesh-color-2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--mesh-color-3) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, var(--mesh-color-4) 0px, transparent 50%);
+  background-size:
+    40px 40px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-attachment: fixed;
 }
 
 @layer base {
@@ -103,7 +136,20 @@ body {
 
 /* Sidebar Panel */
 .SidebarLink {
-  @apply w-full font-monsterr bg-secondary/50 hover:bg-tealClr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
+  @apply w-full font-montserrat bg-secondary/50 hover:bg-tealClr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
 }
 
 /* Connect Wallet Button */
@@ -147,35 +193,44 @@ body {
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    text-shadow:
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
       0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   }
   14% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    text-shadow:
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
       0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   }
   15% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
   50% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
   }
   99% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
   }
   100% {
-    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+    text-shadow:
+      -0.025em 0 0 rgba(255, 0, 0, 0.75),
       -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
       -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
   }

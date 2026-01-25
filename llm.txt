@@ -1,0 +1,39 @@
+# Solana Launchpad Portfolio Project
+
+## Project Overview
+This is a modern Solana Launchpad portfolio site built with Next.js 14, Tailwind CSS, and Shadcn UI. It features a high-performance, accessible, and visually stunning interface with a "Creamy/Blue" theme in Light mode and "Deep Space" theme in Dark mode.
+
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Runtime**: Bun
+- **Styling**: Tailwind CSS, Shadcn UI, Framer Motion
+- **Icons**: Iconify (Solar Icon Set)
+- **Theming**: next-themes
+- **Language**: TypeScript
+
+## Key Directories
+- `/app`: App router pages and layouts
+- `/components`: Reusable UI components
+- `/components/ui`: Shadcn primitive components
+- `/images`: Static assets (imported in code)
+- `/public`: Static assets (served directly)
+- `/providers`: Context providers (Theme, etc.)
+
+## Design System
+- **Fonts**: Montserrat (Headings), Rubik/Jakarta/Space Grotesk (Body/Display)
+- **Colors**: Semantic tokens (primary, secondary, accent, muted) defined in `globals.css`
+- **Effects**: Glassmorphism, Mesh Gradients, Smooth Scrolling
+
+## Core Features
+1. **Responsive Header**: Floating glassmorphism header with mobile sheet menu.
+2. **Hero Section**: Animated introduction.
+3. **Features/Services**: Grid layouts with hover effects.
+4. **Theme Toggle**: Custom sun/moon animated switch.
+5. **CTA**: Gradient-backed call to action with animated list.
+6. **Partners**: Logo grid with grayscale-to-color hover.
+
+## Best Practices
+- Use `bun` for package management.
+- Prefer `lucide-react` or `@iconify/react` (Solar set) for icons.
+- Ensure all components support both Light and Dark modes via semantic classes (`bg-background`, `text-foreground`).
+- Maintain accessibility (aria-labels, focus states).

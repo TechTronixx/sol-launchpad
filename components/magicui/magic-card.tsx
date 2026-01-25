@@ -27,7 +27,7 @@ export function MagicCard({
       mouseX.set(e.clientX - left);
       mouseY.set(e.clientY - top);
     },
-    [mouseX, mouseY]
+    [mouseX, mouseY],
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -45,8 +45,8 @@ export function MagicCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex size-full overflow-hidden rounded-xl bg-slate-900 dark:bg-neutral-900 border text-black dark:text-white",
-        className
+        "group relative flex size-full overflow-hidden rounded-xl bg-card border text-card-foreground",
+        className,
       )}
     >
       <div className="relative z-10">{children}</div>

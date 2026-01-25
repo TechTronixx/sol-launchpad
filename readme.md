@@ -6,14 +6,15 @@ A Solana launchpad frontend with various features.
 https://github.com/user-attachments/assets/288ea138-e33a-4962-8f2b-af4202c4af58
 
 ## Features
+
 - Token Creator UI: Create custom tokens on the Solana blockchain
-- NFT Creator UI: Create custom NFTs on the Solana blockchain 
+- NFT Creator UI: Create custom NFTs on the Solana blockchain
 - Mint NFT UI: Mint NFTs on the Solana blockchain
 - Responsive Design: Mobile-friendly user interface
 
 ## Tech Stack
 
-- Next.js 13 (App Router)
+- Next.js 14 (App Router)
 - React
 - TypeScript
 - Tailwind CSS
@@ -39,18 +40,19 @@ https://github.com/user-attachments/assets/288ea138-e33a-4962-8f2b-af4202c4af58
 3. Install dependencies:
 
    ```
-   pnpm install
+   bun install
    ```
 
 4. Run the development server:
 
    ```
-   pnpm run dev
+   bun run dev
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Stats
+
 If you find this project useful, consider giving it a star!
 
 <a href="https://www.star-history.com/#TechTronixx/sol-launchpad&type=date&legend=top-left">
@@ -73,4 +75,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 For custom development requests or queries, please contact me at
 [foxstot@gmail.com](mailto:foxstot@gmail.com)
-
