@@ -57,7 +57,7 @@ const Partners = () => {
                       alt={`Partner ${index + 1}`}
                       width={160}
                       height={80}
-                      className="object-contain w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-300 dark:brightness-200 dark:grayscale group-hover:dark:grayscale-0 dark:invert-0 invert dark:invert-0"
+                      className="object-contain w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-300 dark:brightness-200 dark:grayscale group-hover:dark:grayscale-0 invert dark:invert-0"
                     />
                   </div>
                 </motion.div>

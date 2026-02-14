@@ -47,10 +47,10 @@ export default function NFTMintPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-void pt-32 relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-background pt-32 relative overflow-hidden">
       {/* Background Ambience */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-radioactive-teal/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -58,12 +58,12 @@ export default function NFTMintPage() {
         className="flex-grow container px-4 lg:px-8 mx-auto relative z-10"
       >
         <div className="flex flex-col items-center mb-16 text-center">
-          <span className="inline-block px-3 py-1 mb-4 text-xs font-mono text-radioactive-teal border border-radioactive-teal/30 bg-radioactive-teal/5 rounded-full">
-            :: GENESIS_DROP
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-mono text-primary border border-primary/30 bg-primary/5 rounded-full">
+            Genesis Drop
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold font-clash text-white tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold font-clash text-foreground tracking-tight">
             ASSET{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-radioactive-teal to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
               MINT
             </span>
           </h1>
@@ -77,23 +77,23 @@ export default function NFTMintPage() {
                 key={stage}
                 className={`p-6 border transition-all duration-300 relative overflow-hidden group ${
                   currentStage === stage
-                    ? "bg-white/10 border-radioactive-teal/50"
-                    : "bg-white/5 border-white/10 opacity-60 hover:opacity-80"
+                    ? "bg-secondary/40 border-primary/50"
+                    : "bg-secondary/20 border-border opacity-60 hover:opacity-80"
                 }`}
               >
                 {currentStage === stage && (
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-radioactive-teal shadow-[0_0_10px_2px_rgba(45,212,191,0.5)]" />
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary shadow-[0_0_10px_2px_rgba(45,212,191,0.5)]" />
                 )}
 
                 <div className="flex justify-between items-start mb-4">
-                  <h2 className="text-xl font-bold font-clash text-white uppercase tracking-wide">
+                  <h2 className="text-xl font-bold font-clash text-foreground uppercase tracking-wide">
                     {info.name} Stage
                   </h2>
                   <span
                     className={`text-[10px] font-mono px-2 py-1 border rounded-sm ${
                       currentStage === stage
-                        ? "text-radioactive-teal border-radioactive-teal/30 bg-radioactive-teal/10 animate-pulse"
-                        : "text-muted-foreground border-white/10"
+                        ? "text-primary border-primary/30 bg-primary/10 animate-pulse"
+                        : "text-muted-foreground border-border"
                     }`}
                   >
                     [{info.status}]
@@ -103,17 +103,17 @@ export default function NFTMintPage() {
                 <div className="grid grid-cols-2 gap-4 mb-6 relative z-10">
                   <div className="space-y-1">
                     <p className="text-[10px] text-muted-foreground font-mono">
-                      UNIT_PRICE
+                      Unit Price
                     </p>
-                    <p className="text-lg font-bold text-white">
+                    <p className="text-lg font-bold text-foreground">
                       {info.price} SOL
                     </p>
                   </div>
                   <div className="space-y-1 text-right">
                     <p className="text-[10px] text-muted-foreground font-mono">
-                      TIME_REMAINING
+                      Time Remaining
                     </p>
-                    <p className="text-lg font-bold text-white font-mono">
+                    <p className="text-lg font-bold text-foreground font-mono">
                       {info.timeRemaining}
                     </p>
                   </div>
@@ -124,8 +124,8 @@ export default function NFTMintPage() {
                   disabled={currentStage !== stage}
                   className={`w-full h-12 font-bold font-clash tracking-wider uppercase rounded-sm ${
                     currentStage === stage
-                      ? "bg-radioactive-teal text-black hover:bg-radioactive-teal/90"
-                      : "bg-white/5 text-muted-foreground hover:bg-white/10 border border-white/5"
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                      : "bg-secondary/20 text-muted-foreground hover:bg-secondary/40 border border-border"
                   }`}
                 >
                   {currentStage === stage
@@ -138,11 +138,11 @@ export default function NFTMintPage() {
 
           {/* Right Column: Preview */}
           <div className="sticky top-32">
-            <div className="bg-obsidian border border-white/10 p-1 relative group">
+            <div className="bg-card border border-border p-1 relative group">
               {/* Holo Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-radioactive-teal to-blue-500 opacity-20 blur-lg group-hover:opacity-40 transition-opacity" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 opacity-20 blur-lg group-hover:opacity-40 transition-opacity" />
 
-              <div className="relative bg-void border border-white/5 aspect-square flex items-center justify-center overflow-hidden mb-4">
+              <div className="relative bg-background border border-border/50 aspect-square flex items-center justify-center overflow-hidden mb-4">
                 <Image
                   src={HeroImg}
                   alt="NFT Preview"
@@ -155,14 +155,15 @@ export default function NFTMintPage() {
                   alt="NFT Preview"
                   width={450}
                   height={450}
+                  priority
                   className="object-contain relative z-10 transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Overlay Grid */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
               </div>
 
-              <div className="p-6 space-y-4 bg-white/5">
-                <h2 className="text-2xl font-bold font-clash text-white">
+              <div className="p-6 space-y-4 bg-secondary/30">
+                <h2 className="text-2xl font-bold font-clash text-foreground">
                   Project XYZ
                 </h2>
                 <p className="text-sm text-muted-foreground font-syne line-clamp-2">
@@ -171,14 +172,14 @@ export default function NFTMintPage() {
                 </p>
 
                 <div className="space-y-2">
-                  <div className="flex justify-between text-xs font-mono text-radioactive-teal">
-                    <span>MINT_PROGRESS</span>
+                  <div className="flex justify-between text-xs font-mono text-primary">
+                    <span>Mint Progress</span>
                     <span>{progress}%</span>
                   </div>
                   <Progress
                     value={progress}
-                    className="h-2 bg-black border border-white/10"
-                    indicatorClassName="bg-radioactive-teal"
+                    className="h-2 bg-background border border-border"
+                    indicatorClassName="bg-primary"
                   />
                 </div>
               </div>
@@ -188,10 +189,10 @@ export default function NFTMintPage() {
 
         {/* FAQ */}
         <div className="mt-24 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-white font-clash mb-12 flex items-center justify-center gap-3">
+          <h2 className="text-2xl font-bold text-center text-foreground font-clash mb-12 flex items-center justify-center gap-3">
             <Icon
-              icon="solar:chat-round-line-linear"
-              className="text-radioactive-teal"
+              icon="solar:chat-round-line-bold-duotone"
+              className="text-primary"
             />
             Protocol FAQ
           </h2>
@@ -213,9 +214,9 @@ export default function NFTMintPage() {
               <AccordionItem
                 value={`item-${i}`}
                 key={i}
-                className="border border-white/10 bg-white/5 px-4 rounded-sm data-[state=open]:border-radioactive-teal/30"
+                className="border border-border bg-secondary/20 px-4 rounded-sm data-[state=open]:border-primary/30"
               >
-                <AccordionTrigger className="text-white hover:text-radioactive-teal font-syne hover:no-underline">
+                <AccordionTrigger className="text-foreground hover:text-primary font-syne hover:no-underline">
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground font-mono text-xs">

@@ -27,28 +27,11 @@ module.exports = {
         unbounded: ["var(--font-unbounded)", "sans-serif"],
       },
       colors: {
-        // ... existing colors merged with new palette
-        // Neo-Obsidian (Dark Mode)
-        void: "#02040a",
-        "deep-midnight": "#050511",
-        "acid-green": "#ccff00",
-        "cyber-cyan": "#00f0ff",
-        "electric-purple": "#7000ff",
+        // Solana Brand Colors (Allowed Exceptions)
+        "solana-purple": "#9945ff",
+        "solana-green": "#14f195",
 
-        // Optical Lab (Light Mode)
-        "vapor-white": "#f8fafc",
-        "cool-white": "#f0f4f8",
-        "deep-blue": "#1e293b",
-        "electric-teal": "#0d9488",
-        "international-orange": "#ff4d00", // High contrast accent
-
-        // Existing merged...
-        obsidian: "#0f0f11",
-        "radioactive-teal": "#00ffa3",
-        "hyper-violet": "#a855f7",
-        silver: "#e4e4e7",
-        tealClr: "var(--tealClr)",
-        tealDarkClr: "var(--tealDarkClr)",
+        // Semantic Tokens (Strict 4-Color Rule)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

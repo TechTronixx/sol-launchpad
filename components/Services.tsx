@@ -58,7 +58,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center space-y-4">
           <span className="inline-block px-3 py-1 text-xs font-mono text-primary border border-primary/20 bg-primary/5 rounded-full">
-            :: DEPLOYMENT_ZONES
+            OUR TOOLS
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold font-clash text-foreground tracking-tight text-balance">
             SERVICES & TOOLS
@@ -79,7 +79,7 @@ export default function Services() {
                 // Shape
                 "rounded-sm border border-border/50",
                 // Background
-                "bg-card/40 backdrop-blur-md dark:bg-zinc-900/40 light:bg-white/60",
+                "bg-card/40 backdrop-blur-md",
                 // Grid Logic
                 index === 0
                   ? "col-span-6 md:col-span-4"
@@ -119,7 +119,7 @@ export default function Services() {
                     className="w-full justify-between text-primary border-primary/20 bg-primary/5 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 rounded-sm py-6 group/btn"
                   >
                     <span className="font-semibold font-mono tracking-wider">
-                      INITIATE
+                      LAUNCH TOOL
                     </span>
                     <Icon
                       icon="solar:arrow-right-linear"

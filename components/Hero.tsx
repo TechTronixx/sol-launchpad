@@ -27,29 +27,37 @@ const Notification = ({
       className={cn(
         "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden",
         "transition-all duration-200 hover:scale-[101%]",
-        // Glass Shard Style
-        "bg-zinc-900/40 backdrop-blur-md",
-        "border-l-2 border-r-0 border-y-0",
-        // Sharp corners - minimal rounding
+        // Glass Shard Style - Asymmetric Border
+        "backdrop-blur-md shadow-lg",
+        "bg-white/5 dark:bg-white/5",
+        // Asymmetric borders: Top/Left lighter, Bottom/Right darker (handled by shadows or specific borders)
+        "border-t border-white/10",
+        "border-r border-black/20",
+        "border-b border-black/20",
+        // Left border width handled by style for color
+        "px-3 py-3",
+        // Sharp corners
         "rounded-sm",
-        // Text
-        "p-3",
       )}
-      style={{ borderLeftColor: color }}
+      style={{ borderLeft: `3px solid ${color}` }}
     >
       <div className="flex flex-row items-center gap-3">
-        <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-black/50 ring-1 ring-white/10">
+        <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/5 ring-1 ring-white/10">
           <Icon icon={icon} className="text-lg" style={{ color: color }} />
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="flex flex-row items-center whitespace-pre text-sm font-medium text-white">
-            <span className="text-xs text-zinc-400 font-mono mr-2">{name}</span>
-            <span className="text-xs text-zinc-500">·</span>
-            <span className="text-xs text-zinc-400 ml-1">{action}</span>
+          <figcaption className="flex flex-row items-center whitespace-pre text-sm font-medium text-foreground">
+            <span className="text-xs text-muted-foreground font-mono mr-2">
+              {name}
+            </span>
+            <span className="text-xs text-muted-foreground/30">·</span>
+            <span className="text-xs text-muted-foreground ml-1">{action}</span>
           </figcaption>
           <div className="flex items-center gap-2 mt-1">
-            <p className="text-[10px] font-mono text-zinc-500">{time}</p>
-            <p className="text-xs font-mono font-bold text-white/90">
+            <p className="text-[10px] font-mono text-muted-foreground/70">
+              {time}
+            </p>
+            <p className="text-xs font-mono font-bold text-foreground/90">
               {amount}
             </p>
           </div>
@@ -66,7 +74,7 @@ const notifications = [
     action: "Minted Token",
     time: "12ms ago",
     amount: "2.5 SOL",
-    icon: "lucide:zap",
+    icon: "solar:bolt-bold-duotone",
     color: "#2dd4bf", // Teal
   },
   {
@@ -74,7 +82,7 @@ const notifications = [
     action: "Liquidity Add",
     time: "45ms ago",
     amount: "150.0 SOL",
-    icon: "lucide:activity",
+    icon: "solar:graph-up-bold-duotone",
     color: "#00ffa3", // Radioactive Teal
   },
   {
@@ -82,7 +90,7 @@ const notifications = [
     action: "Project Launch",
     time: "1s ago",
     amount: "NEW",
-    icon: "lucide:rocket",
+    icon: "solar:rocket-bold-duotone",
     color: "#a855f7", // Hyper Violet
   },
   {
@@ -90,7 +98,7 @@ const notifications = [
     action: "Wallet Connect",
     time: "2s ago",
     amount: "-",
-    icon: "lucide:wallet",
+    icon: "solar:wallet-bold-duotone",
     color: "#3b82f6", // Blue
   },
   {
@@ -98,19 +106,19 @@ const notifications = [
     action: "Token Deploy",
     time: "3s ago",
     amount: "0.5 SOL",
-    icon: "lucide:code",
+    icon: "solar:code-bold-duotone",
     color: "#ef4444", // Red
   },
 ];
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-16 pt-24 overflow-hidden bg-background">
+    <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-16 pt-24 overflow-visible bg-transparent">
       {/* Background Atmosphere */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         {/* Aurora Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-teal-900/20 blur-[120px] rounded-[100%]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-primary/10 blur-[120px] rounded-[100%]" />
       </div>
 
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -121,14 +129,14 @@ function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 px-3 py-1 rounded-full border border-teal-500/20 bg-teal-500/5 backdrop-blur-sm"
+            className="flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            <span className="text-[10px] font-mono text-teal-400 tracking-wider">
-              PLATFORM_READY
+            <span className="text-[10px] font-mono text-primary tracking-wider uppercase">
+              Platform Live
             </span>
           </motion.div>
 
@@ -140,22 +148,18 @@ function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-5xl lg:text-7xl font-clash font-semibold tracking-tight leading-[0.9]"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-slate-500">
-                SOLANA
-              </span>
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-300 to-slate-600">
-                LAUNCHPAD
+              <span className="bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/50">
+                Solana Launchpad
               </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg text-slate-400 max-w-lg leading-relaxed pt-4"
+              className="text-lg text-muted-foreground max-w-lg leading-relaxed pt-4"
             >
-              The high-frequency terminal for the next generation of Web3
-              projects. Mint, launch, and trade with military-grade precision.
+              The advanced launchpad for Web3 projects. Create tokens, manage
+              presales, and mint NFTs with ease and security.
             </motion.p>
           </div>
 
@@ -166,11 +170,10 @@ function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <div className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-teal-300 opacity-30 blur group-hover:opacity-75 transition duration-500 rounded-full"></div>
-              <button className="relative flex items-center gap-2 px-8 py-4 bg-zinc-900/60 backdrop-blur-md rounded-full border border-teal-500/30 text-teal-50 font-medium tracking-wide transition-all duration-300 group-hover:border-teal-400 group-hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
-                LAUNCH YOUR PROJECT
+              <button className="relative flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-medium tracking-wide transition-all duration-300 shadow-lg shadow-primary/20">
+                Launch Your Project
                 <Icon
-                  icon="lucide:arrow-right"
+                  icon="solar:arrow-right-linear"
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
                 />
               </button>
@@ -187,14 +190,9 @@ function Hero() {
         >
           {/* Feed Header */}
           <div className="flex items-center justify-between mb-4 px-2">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">
-              [LIVE_FEED]
+            <span className="text-sm font-medium text-muted-foreground">
+              Recent Activity
             </span>
-            <div className="flex gap-1">
-              <div className="w-1 h-1 bg-zinc-600 rounded-full" />
-              <div className="w-1 h-1 bg-zinc-600 rounded-full" />
-              <div className="w-1 h-1 bg-zinc-600 rounded-full" />
-            </div>
           </div>
 
           {/* The List using Notification Cards */}

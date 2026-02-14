@@ -1,6 +1,6 @@
 import "./globals.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   montserrat,
   rubik,
@@ -14,10 +14,55 @@ import Provider from "@/providers/Provider";
 import Header from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Loader from "@/components/Loader";
+import SmoothScrolling from "@/components/SmoothScrolling";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// ... (keep metadata)
+export const metadata: Metadata = {
+  title: {
+    default: "Solana Launchpad",
+    template: "%s | Solana Launchpad",
+  },
+  description:
+    "A premier Solana Launchpad to create tokens, mint NFTs, and manage presales on the Solana blockchain.",
+  metadataBase: new URL("https://solana-launchpad.vercel.app"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://solana-launchpad.vercel.app",
+    siteName: "Solana Launchpad",
+    title: "Solana Launchpad — Token & NFT Launch Terminal",
+    description:
+      "Create SPL tokens, mint NFTs, and manage presales on the Solana blockchain.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Solana Launchpad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solana Launchpad",
+    description: "Create SPL tokens, mint NFTs, and manage presales on Solana.",
+    creator: "@TechTronixx",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf8f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#050505" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({
   children,
@@ -43,14 +88,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mesh-gradient-bg min-h-screen">
-            <Header />
-            {children}
-            <ScrollToTop />
-            <Loader />
-            <Analytics />
-            <SpeedInsights />
-          </div>
+          <SmoothScrolling>
+            <div className="mesh-gradient-bg min-h-screen">
+              <Header />
+              {children}
+              <ScrollToTop />
+              <Loader />
+              <Analytics />
+              <SpeedInsights />
+            </div>
+          </SmoothScrolling>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{

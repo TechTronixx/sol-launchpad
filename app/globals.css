@@ -20,34 +20,33 @@ body {
     /* Solana Brand Gradient */
     --solana-gradient: linear-gradient(90deg, #9945ff, #14f195);
 
-    /* Light Mode - Balanced Warm Aesthetic */
-    /* NO GRAY allows: Warm Browns, Deep Teals, Rich Creams */
-    --background: 40 50% 98%; /* Golden Cream */
-    --foreground: 222 47% 15%; /* Deep Navy for contrast */
+    /* Light Mode - Cool Tech Aesthetic */
+    --background: 210 40% 98%; /* Vapor White */
+    --foreground: 222 47% 15%; /* Deep Navy */
 
-    --card: 40 30% 96%; /* Warm card */
+    --card: 0 0% 100%; /* Pure White */
     --card-foreground: 222 47% 15%;
 
-    --popover: 40 50% 98%;
+    --popover: 0 0% 100%;
     --popover-foreground: 222 47% 15%;
 
     --primary: 173 80% 32%; /* Deep Teal */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 30% 94%; /* Warm Sand */
+    --secondary: 210 40% 96%; /* Cool Grey/White */
     --secondary-foreground: 222 47% 15%;
 
-    --muted: 35 30% 94%;
-    --muted-foreground: 25 20% 35%; /* Warm Deep Brown - NO GRAY */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%; /* Cool Grey */
 
-    --accent: 35 30% 94%;
+    --accent: 210 40% 96%;
     --accent-foreground: 222 47% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 88%; /* Warm Beige Border */
-    --input: 35 20% 88%;
+    --border: 214 32% 91%; /* Light Blue-Grey */
+    --input: 214 32% 91%;
     --ring: 173 80% 32%;
 
     --radius: 0.75rem;
@@ -55,13 +54,13 @@ body {
     --tealClr: #0d9488;
     --tealDarkClr: #0f766e;
 
-    --grid-color: hsla(173, 80%, 35%, 0.08);
+    --grid-color: hsla(173, 80%, 35%, 0.05);
 
-    /* Mesh Gradient Colors (Light - Warm/Teal/Purple) */
-    --mesh-color-1: hsla(173, 80%, 40%, 0.15);
-    --mesh-color-2: hsla(40, 80%, 60%, 0.15);
-    --mesh-color-3: hsla(280, 60%, 70%, 0.1);
-    --mesh-color-4: hsla(210, 80%, 80%, 0.1);
+    /* Mesh Gradient Colors (Light - Cool/Teal/Blue) */
+    --mesh-color-1: hsla(173, 80%, 40%, 0.1);
+    --mesh-color-2: hsla(210, 80%, 60%, 0.1);
+    --mesh-color-3: hsla(250, 60%, 70%, 0.05);
+    --mesh-color-4: hsla(200, 80%, 80%, 0.05);
   }
 
   .dark {
@@ -136,7 +135,7 @@ body {
 
 /* Sidebar Panel */
 .SidebarLink {
-  @apply w-full font-montserrat bg-secondary/50 hover:bg-tealClr hover:text-background rounded px-4 py-1 flex gap-4 justify-center items-center;
+  @apply w-full font-mono bg-secondary/50 hover:bg-primary hover:text-primary-foreground rounded px-4 py-1 flex gap-4 justify-center items-center;
 }
 
 @layer utilities {
@@ -158,11 +157,13 @@ body {
   height: fit-content;
   line-height: normal;
   padding: 0.5em 1em;
+  font-family: var(--font-clash), sans-serif !important;
 }
 
 .wallet-adapter-button:not([disabled]):hover {
-  background-color: var(--tealDarkClr);
-  border: 4px solid var(--tealDarkClr);
+  background-color: hsl(var(--primary));
+  border: 4px solid hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
   border-radius: 0.5rem;
 }
 

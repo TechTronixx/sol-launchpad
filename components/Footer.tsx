@@ -1,10 +1,9 @@
-import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 export default function Footer() {
   return (
-    <footer className="py-20 bg-void text-muted-foreground border-t border-white/5 font-jakarta relative overflow-hidden">
+    <footer className="py-20 bg-card text-muted-foreground border-t border-border font-jakarta relative overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute -top-20 right-0 w-96 h-96 bg-primary/5 blur-[100px] pointer-events-none" />
@@ -14,10 +13,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="w-full md:w-1/4">
             <h3 className="mb-6 text-2xl font-bold font-clash text-foreground tracking-wider">
-              LAUNCHPAD_V1
+              LAUNCHPAD
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs font-mono">
-              The terminal for decentralized deployment. <br />
+              The platform for decentralized deployment. <br />
               Secure. Scalable. Fast.
             </p>
           </div>
@@ -25,7 +24,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="w-full md:w-1/4">
             <h4 className="mb-6 text-sm font-bold text-foreground font-mono uppercase tracking-widest text-primary">
-              {/* // Navigation */}
+              Navigation
             </h4>
             <ul className="space-y-3 font-space">
               {[
@@ -49,7 +48,7 @@ export default function Footer() {
           {/* Token Tools */}
           <div className="w-full md:w-1/4">
             <h4 className="mb-6 text-sm font-bold text-foreground font-mono uppercase tracking-widest text-primary">
-              {/* // Modules */}
+              Modules
             </h4>
             <ul className="space-y-3 font-space">
               {[
@@ -73,46 +72,46 @@ export default function Footer() {
           {/* Connect */}
           <div className="w-full md:w-1/4">
             <h4 className="mb-6 text-sm font-bold text-foreground font-mono uppercase tracking-widest text-primary">
-              {/* // Uplink */}
+              Uplink
             </h4>
             <div className="flex gap-4 mb-8">
               <Link
                 href="#"
-                className="p-3 bg-white/5 rounded-sm hover:bg-primary hover:text-white transition-all group border border-white/10"
+                className="p-3 bg-secondary/50 rounded-sm hover:bg-primary hover:text-primary-foreground transition-all group border border-border"
               >
                 <Icon
-                  icon="logos:twitter"
-                  className="w-5 h-5 grayscale group-hover:grayscale-0 transition-all brightness-200"
+                  icon="ri:twitter-x-fill"
+                  className="w-5 h-5 transition-all"
                 />
               </Link>
               <Link
                 href="#"
-                className="p-3 bg-white/5 rounded-sm hover:bg-primary hover:text-white transition-all group border border-white/10"
+                className="p-3 bg-secondary/50 rounded-sm hover:bg-primary hover:text-primary-foreground transition-all group border border-border"
               >
                 <Icon
-                  icon="logos:discord-icon"
-                  className="w-5 h-5 grayscale group-hover:grayscale-0 transition-all brightness-200"
+                  icon="ri:discord-fill"
+                  className="w-5 h-5 transition-all"
                 />
               </Link>
               <Link
                 href="mailto:info@tokenlaunchpad.com"
-                className="p-3 bg-white/5 rounded-sm hover:bg-primary hover:text-white transition-all group border border-white/10"
+                className="p-3 bg-secondary/50 rounded-sm hover:bg-primary hover:text-primary-foreground transition-all group border border-border"
               >
                 <Icon icon="solar:letter-linear" className="w-5 h-5" />
               </Link>
             </div>
 
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent opacity-30 group-hover:opacity-70 blur transition duration-500 rounded-sm"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-500 opacity-30 group-hover:opacity-70 blur transition duration-500 rounded-sm"></div>
               <div className="relative flex">
                 <input
                   type="email"
-                  placeholder="ENTER_EMAIL"
-                  className="w-full px-4 py-3 bg-black border border-white/10 rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all pr-12 text-sm text-foreground font-mono"
+                  placeholder="Enter Email"
+                  className="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all pr-12 text-sm text-foreground font-mono placeholder:text-muted-foreground"
                 />
                 <button
                   type="submit"
-                  className="absolute right-1 top-1 bottom-1 px-3 bg-primary/20 text-primary hover:bg-primary hover:text-black transition-colors rounded-sm"
+                  className="absolute right-1 top-1 bottom-1 px-3 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors rounded-sm"
                 >
                   <Icon icon="solar:arrow-right-linear" className="w-4 h-4" />
                 </button>
@@ -121,11 +120,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/5">
+        <div className="mt-20 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-muted-foreground/60">
-            <div>OPERATIONAL</div>
             <div>
-              © {new Date().getFullYear()} LAUNCHPAD_TERMINAL. ALL RIGHTS
+              © {new Date().getFullYear()} Solana Launchpad. ALL RIGHTS
               RESERVED.
             </div>
           </div>

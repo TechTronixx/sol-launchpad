@@ -103,7 +103,7 @@ export default function Features() {
                   // Shape & Border
                   "rounded-sm border border-border/50 hover:border-primary/50",
                   // Background
-                  "bg-card/40 backdrop-blur-md dark:bg-zinc-900/40 light:bg-white/60",
+                  "bg-card/40 backdrop-blur-md",
                   // Hover Effects
                   "hover:shadow-[0_0_30px_-10px_rgba(var(--primary-rgb),0.2)] dark:hover:shadow-[0_0_20px_rgba(45,212,191,0.1)]",
                   "hover:-translate-y-1",

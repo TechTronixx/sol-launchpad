@@ -58,7 +58,7 @@ const LaunchpadNotification = ({
         "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden",
         "transition-all duration-200 hover:scale-[101%]",
         // Glass Shard Style
-        "bg-zinc-900/40 backdrop-blur-md",
+        "bg-card/60 backdrop-blur-md dark:bg-card/40",
         "border-l-2 border-r-0 border-y-0",
         // Sharp corners
         "rounded-sm",
@@ -68,15 +68,15 @@ const LaunchpadNotification = ({
       style={{ borderLeftColor: color }}
     >
       <div className="flex flex-row items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-black/50 ring-1 ring-white/10">
+        <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-card/80 ring-1 ring-border">
           <span className="text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">
           <figcaption className="flex flex-row items-center font-medium whitespace-pre text-foreground font-space">
-            <span className="text-sm font-bold text-white uppercase">
+            <span className="text-sm font-bold text-foreground uppercase">
               {name}
             </span>
-            <span className="mx-1 text-zinc-600">·</span>
+            <span className="mx-1 text-muted-foreground/50">·</span>
             <span className="text-xs text-muted-foreground font-mono">
               {time}
             </span>
@@ -92,15 +92,21 @@ const LaunchpadNotification = ({
 
 const SolanaLaunchpadCTA = () => {
   return (
-    <section className="min-h-[60vh] px-4 py-20 bg-transparent relative overflow-hidden sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <section className="min-h-[60vh] px-4 pt-40 pb-20 bg-transparent relative overflow-hidden sm:px-6 lg:px-8 flex flex-col items-center justify-start">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="flex flex-col items-center justify-center w-full relative z-10 space-y-8">
-        <div className="text-center space-y-2">
-          <span className="text-sm font-mono text-primary/80 tracking-widest">
-            :: READY_TO_LAUNCH?
-          </span>
+        <div className="text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span className="text-xs font-mono text-primary font-medium tracking-wide uppercase">
+              Mainnet Beta Live
+            </span>
+          </div>
           <h2 className="text-5xl md:text-7xl font-bold font-clash text-foreground tracking-tighter">
             START YOUR JOURNEY
           </h2>
@@ -108,13 +114,13 @@ const SolanaLaunchpadCTA = () => {
 
         <div className="flex flex-col items-center justify-center relative z-10">
           <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary opacity-30 blur group-hover:opacity-75 transition duration-500 rounded-full"></div>
-            <button className="relative flex items-center px-8 py-4 bg-background/80 backdrop-blur-md rounded-full border border-primary/50 text-primary font-bold tracking-wide transition-all duration-300 group-hover:scale-105 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)]">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-primary opacity-30 blur group-hover:opacity-75 transition duration-500 rounded-full"></div>
+            <button className="relative flex items-center px-8 py-4 bg-background/80 backdrop-blur-md rounded-full border border-primary/50 text-primary font-bold tracking-wide transition-all duration-300 group-hover:scale-105 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/25">
               <Icon
                 icon="solar:rocket-2-bold-duotone"
                 className="w-6 h-6 mr-2 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110"
               />
-              <span className="text-lg">LAUNCH PROJECT_V1</span>
+              <span className="text-lg">LAUNCH PROJECT</span>
             </button>
           </div>
         </div>

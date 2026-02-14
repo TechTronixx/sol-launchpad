@@ -11,10 +11,10 @@ import Footer from "@/components/Footer";
 
 export default function PresaleCreator() {
   return (
-    <div className="flex flex-col min-h-screen bg-void pt-32 relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-background pt-32 relative overflow-hidden">
       {/* Background Ambience */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
-      <div className="absolute top-0 right-1/2 translate-x-1/2 w-[600px] h-[300px] bg-radioactive-teal/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      <div className="absolute top-0 right-1/2 translate-x-1/2 w-[600px] h-[300px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -22,12 +22,12 @@ export default function PresaleCreator() {
         className="flex-grow container px-4 lg:px-8 mx-auto relative z-10"
       >
         <div className="flex flex-col items-center mb-16 text-center">
-          <span className="inline-block px-3 py-1 mb-4 text-xs font-mono text-radioactive-teal border border-radioactive-teal/30 bg-radioactive-teal/5 rounded-full">
-            :: LIQUIDITY_INJECTION
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-mono text-primary border border-primary/30 bg-primary/5 rounded-full">
+            Liquidity Injection
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold font-clash text-white tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold font-clash text-foreground tracking-tight">
             PRESALE{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-radioactive-teal to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
               TERMINAL
             </span>
           </h1>
@@ -41,19 +41,19 @@ export default function PresaleCreator() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="max-w-4xl mx-auto bg-void/60 backdrop-blur-md border border-white/10 p-8 md:p-12 relative overflow-hidden group"
+          className="max-w-4xl mx-auto bg-card/60 backdrop-blur-md border border-border p-8 md:p-12 relative overflow-hidden group"
         >
           {/* Corner Accents */}
-          <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-radioactive-teal/30" />
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-radioactive-teal/30" />
+          <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-primary/30" />
+          <div className="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-primary/30" />
 
           <form className="space-y-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider font-clash flex items-center gap-2">
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider font-clash flex items-center gap-2">
                   <Icon
-                    icon="solar:box-minimalistic-linear"
-                    className="text-radioactive-teal"
+                    icon="solar:box-minimalistic-bold-duotone"
+                    className="text-primary"
                   />
                   Target Asset
                 </h3>
@@ -68,10 +68,10 @@ export default function PresaleCreator() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider font-clash flex items-center gap-2">
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider font-clash flex items-center gap-2">
                   <Icon
-                    icon="solar:clock-circle-linear"
-                    className="text-radioactive-teal"
+                    icon="solar:clock-circle-bold-duotone"
+                    className="text-primary"
                   />
                   Timeline & Vesting
                 </h3>
@@ -96,8 +96,8 @@ export default function PresaleCreator() {
               </div>
             </div>
 
-            <div className="pt-8 border-t border-white/5 space-y-4">
-              <h3 className="text-sm font-bold text-white uppercase tracking-wider font-clash">
+            <div className="pt-8 border-t border-border space-y-4">
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider font-clash">
                 Project Details
               </h3>
               <Textarea
@@ -107,9 +107,9 @@ export default function PresaleCreator() {
             </div>
 
             <div className="flex justify-end pt-4">
-              <Button className="w-full md:w-auto px-8 h-12 bg-radioactive-teal text-black font-bold font-clash tracking-wider hover:bg-radioactive-teal/80 transition-all rounded-sm flex items-center gap-2">
-                INITIATE PRESALE SEQUENCE
-                <Icon icon="solar:rocket-2-linear" className="w-5 h-5" />
+              <Button className="w-full md:w-auto px-8 h-12 bg-primary text-primary-foreground font-bold font-clash tracking-wider hover:bg-primary/80 transition-all rounded-sm flex items-center gap-2">
+                Create Presale
+                <Icon icon="solar:rocket-2-bold-duotone" className="w-5 h-5" />
               </Button>
             </div>
           </form>
