@@ -2,6 +2,26 @@
   "name": "sol-launchpad",
   "version": "0.1.0",
   "private": true,
+  "description": "Solana launchpad frontend template — themed landing sections, wallet integration, and token/NFT/presale UI on Next.js 14.",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "launchpad",
+    "nft",
+    "token",
+    "presale",
+    "nextjs",
+    "tailwind",
+    "shadcn",
+    "web3",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechTronixx/sol-launchpad.git"
+  },
+  "homepage": "https://github.com/TechTronixx/sol-launchpad",
+  "author": "TechTronixx <foxstot@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
